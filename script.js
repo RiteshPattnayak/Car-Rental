@@ -3,27 +3,44 @@ const cars = [
   {
     name: "Maruti Swift",
     price: 1200,
-    img: "https://imgd.aeplcdn.com/1056x594/n/cw/ec/144325/swift-exterior-right-front-three-quarter.jpeg"
+    img: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80"
   },
   {
     name: "Hyundai i20",
     price: 1500,
-    img: "https://imgd.aeplcdn.com/1056x594/n/cw/ec/130459/i20-exterior-right-front-three-quarter-2.jpeg"
+    img: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170://imgd.aeplcdn.com/1056x594/n/cw/ec/130459/i20-exterior-right-front-three-quarter-2.jpeg"
   },
   {
     name: "Tata Nexon",
     price: 2000,
-    img: "https://imgd.aeplcdn.com/1056x594/n/cw/ec/157019/nexon-exterior-right-front-three-quarter.jpeg"
+   
+    img: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80"
+    //img: "https://imgd.aehttps://images.unsplash.com/photo-1641430589592-71899ccfb388?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170plcdn.com/1056x594/n/cw/ec/157019/nexon-exterior-right-front-three-quarter.jpeg"
   },
   {
     name: "Toyota Fortuner",
     price: 4500,
-    img: "https://imgd.aeplcdn.com/1056x594/n/cw/ec/145287/fortuner-exterior-right-front-three-quarter.jpeg"
+    img: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80"
+    
   }
 ];
+const myhome= document.getElementById("myhome");
 
 const carList = document.getElementById("carList");
 const searchInput = document.getElementById("searchInput");
+
+
+
+
+
+
+
+
+//const carList = document.getElementById("carList");
+
+carList.addEventListener("click", function() {
+  window.location.href =  "/";
+});
 
 // Load cars dynamically
 function loadCars(filter = "") {
@@ -33,11 +50,11 @@ function loadCars(filter = "") {
     .forEach(car => {
       const card = document.createElement("div");
       card.classList.add("car-card");
-      card.innerHTML = `
-        <img src="${car.img}" alt="${car.name}">
-        <h3>${car.name}</h3>
-        <p>Price: ₹${car.price}/day</p>
-      `;
+     card.innerHTML = `
+    <img src="${car.img}" alt="${car.name}">
+    <h3>${car.name}</h3>
+    <p>Price: ₹${car.price}/day</p>
+  `;
       carList.appendChild(card);
     });
 }
