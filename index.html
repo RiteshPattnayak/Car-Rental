@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Rental Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1 class="logo">🚗 RentMyRide</h1>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#cars">Cars</a></li>
+      <li><a href="#booking">Booking</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h2>Drive Your Dream Car Today</h2>
+      <p>Affordable, reliable, and fast car rentals in your city.</p>
+      <a href="#cars" class="btn">Explore Cars</a>
+    </div>
+  </section>
+
+  <!-- Cars Section -->
+  <section id="cars" class="cars-section">
+    <h2>Available Cars</h2>
+    <input type="text" id="searchInput" placeholder="Search car by name...">
+    <div class="car-list" id="carList">
+      <!-- Cars will be loaded here by JS -->
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section id="booking" class="booking-section">
+    <h2>Book a Car</h2>
+    <form id="bookingForm">
+      <label for="carName">Car Name:</label>
+      <input type="text" id="carName" required placeholder="Enter car name">
+
+      <label for="pickupDate">Pickup Date:</label>
+      <input type="date" id="pickupDate" required>
+
+      <label for="returnDate">Return Date:</label>
+      <input type="date" id="returnDate" required>
+
+      <label for="location">Pickup Location:</label>
+      <input type="text" id="location" required placeholder="Enter city or location">
+
+      <button type="submit" class="btn">Book Now</button>
+    </form>
+    <p id="confirmation"></p>
+  </section>
+
+  <!-- Contact Section -->
+  <footer id="contact">
+    <h3>Contact Us</h3>
+    <p>Email: support@rentmyride.com</p>
+    <p>Phone: +91 98765 43210</p>
+    <p>© 2025 RentMyRide. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
